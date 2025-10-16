@@ -1,10 +1,11 @@
-import React from "react";
+import { useContext } from "react";
 import { Link } from "react-router";
-import { auth } from "../../firebase/firebase.config";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { valueContext } from "../../Component/Layout/RootLayout";
 
 const Login = () => {
-  const handleLogin = (e) => {
+  const handleLogin = useContext(valueContext);
+
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     // const email = e.target.email.value;
@@ -19,24 +20,13 @@ const Login = () => {
     console.log(email, password);
 
     // login er kaj
-
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        console.log(user);
-        console.log("Login successful!");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-
-
+    handleLogin(email, password);
   };
   return (
     <div className="mx-auto mt-10 card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
       <div className="card-body">
         <h1 className="text-5xl font-bold text-center">Login now!</h1>
-        <form onSubmit={handleLogin} className="fieldset">
+        <form onSubmit={handleSubmit} className="fieldset">
           <label className="label">Email</label>
           <input
             type="email"

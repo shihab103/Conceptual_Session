@@ -1,8 +1,14 @@
 import { Link } from "react-router";
 import { auth } from "../../firebase/firebase.config";
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import { useContext } from "react";
+import { valueContext } from "../../Component/Layout/RootLayout";
 
 const Register = () => {
+
+  const contextValue = useContext(valueContext);
+  console.log(contextValue);
+
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -27,9 +33,6 @@ const Register = () => {
     .catch((error)=>{
       console.log(error);
     });
-    
-
-    
   };
   return (
     <div className="mx-auto mt-10 card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
