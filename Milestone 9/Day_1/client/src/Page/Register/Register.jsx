@@ -1,15 +1,12 @@
 import { Link } from "react-router";
-import { auth } from "../../firebase/firebase.config";
-import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useContext } from "react";
 import { valueContext } from "../../Component/Layout/RootLayout";
 
 const Register = () => {
 
-  const contextValue = useContext(valueContext);
-  console.log(contextValue);
+  const {handleRegister} = useContext(valueContext);
 
-  const handleRegister = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
@@ -23,9 +20,22 @@ const Register = () => {
       return;
     }
 
+    if(!/[a-z]/.test(password)){
+      alert("password must contain at least one lower case latter.");
+      return;
+    }
+    if(!/[A-Z]/.test(password)){
+      alert("password must contain at least one Upper case latter.");
+      return;
+    }
+    if(!/\d/.test(password)){
+      alert("password must contain at least one number.");
+      return;
+    }
+
     // register ser kaj
 
-    createUserWithEmailAndPassword(auth,email,password)
+    handleRegister(email,password)
     .then((userCredential)=>{
       const user = userCredential.user;
       console.log(user);
@@ -38,7 +48,7 @@ const Register = () => {
     <div className="mx-auto mt-10 card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
       <div className="card-body">
         <h1 className="text-5xl font-bold text-center">Register now!</h1>
-        <form onSubmit={handleRegister} className="fieldset">
+        <form onSubmit={handleSubmit} className="fieldset">
           <label className="label">Full Name</label>
           <input
             type="text"

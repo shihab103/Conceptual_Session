@@ -1,11 +1,15 @@
+import { useContext } from "react";
 import { NavLink } from "react-router";
+import { valueContext } from "../Layout/RootLayout";
 
 export default function Navbar() {
+  const {handleLogOut} = useContext(valueContext);
   const links = (
     <div className="flex gap-3">
       <NavLink to="/">Home</NavLink>
       <NavLink to="/login">Login</NavLink>
       <NavLink to="/register">Register</NavLink>
+      <NavLink to="/about">About</NavLink>
     </div>
   );
   return (
@@ -42,7 +46,7 @@ export default function Navbar() {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <button onClick={handleLogOut} className="btn bg-indigo-500 text-white">Log Out</button>
       </div>
     </div>
   );

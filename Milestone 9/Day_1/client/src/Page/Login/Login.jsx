@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import { valueContext } from "../../Component/Layout/RootLayout";
 
 const Login = () => {
-  const handleLogin = useContext(valueContext);
+  const {handleLogin} = useContext(valueContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
