@@ -1,0 +1,272 @@
+[
+  {
+    "company": {
+      "name": "DriveX Rentals",
+      "logo": "https://i.ibb.co/X2RhsFQ/drivex.png"
+    },
+    "vehicle": {
+      "id": 1,
+      "type": "Sedan",
+      "make": "Toyota",
+      "model": "Corolla",
+      "year": 2021,
+      "daily_rate": 45,
+      "photo": "https://i.ibb.co/0s0xYwM/toyota-corolla.jpg"
+    }
+  },
+  {
+    "company": {
+      "name": "ZoomCar",
+      "logo": "https://i.ibb.co/VmvV3SR/zoomcar.png"
+    },
+    "vehicle": {
+      "id": 2,
+      "type": "SUV",
+      "make": "Hyundai",
+      "model": "Tucson",
+      "year": 2020,
+      "daily_rate": 60,
+      "photo": "https://i.ibb.co/pjpn9gT/hyundai-tucson.jpg"
+    }
+  },
+  {
+    "company": {
+      "name": "RideEasy",
+      "logo": "https://i.ibb.co/YpmmM9y/rideeasy.png"
+    },
+    "vehicle": {
+      "id": 3,
+      "type": "Hatchback",
+      "make": "Honda",
+      "model": "Fit",
+      "year": 2022,
+      "daily_rate": 35,
+      "photo": "https://i.ibb.co/XJw3mMs/honda-fit.jpg"
+    }
+  },
+  {
+    "company": {
+      "name": "AutoFleet",
+      "logo": "https://i.ibb.co/1JsdwJk/autofleet.png"
+    },
+    "vehicle": {
+      "id": 4,
+      "type": "SUV",
+      "make": "Kia",
+      "model": "Sportage",
+      "year": 2023,
+      "daily_rate": 70,
+      "photo": "https://i.ibb.co/0GcHQXc/kia-sportage.jpg"
+    }
+  },
+  {
+    "company": {
+      "name": "UrbanDrive",
+      "logo": "https://i.ibb.co/b5P1ZrV/urbandrive.png"
+    },
+    "vehicle": {
+      "id": 5,
+      "type": "Sedan",
+      "make": "Nissan",
+      "model": "Altima",
+      "year": 2021,
+      "daily_rate": 50,
+      "photo": "https://i.ibb.co/q0MNQw7/nissan-altima.jpg"
+    }
+  },
+  {
+    "company": {
+      "name": "GoMotion",
+      "logo": "https://i.ibb.co/Fn31Trs/gomotion.png"
+    },
+    "vehicle": {
+      "id": 6,
+      "type": "Truck",
+      "make": "Ford",
+      "model": "F-150",
+      "year": 2019,
+      "daily_rate": 85,
+      "photo": "https://i.ibb.co/jJzPNR9/ford-f150.jpg"
+    }
+  },
+  {
+    "company": {
+      "name": "FlexiRide",
+      "logo": "https://i.ibb.co/DpC0kh0/flexiride.png"
+    },
+    "vehicle": {
+      "id": 7,
+      "type": "Van",
+      "make": "Mercedes-Benz",
+      "model": "Sprinter",
+      "year": 2022,
+      "daily_rate": 95,
+      "photo": "https://i.ibb.co/7ScJ6p3/mercedes-sprinter.jpg"
+    }
+  },
+  {
+    "company": {
+      "name": "QuickRent",
+      "logo": "https://i.ibb.co/SrfzsqS/quickrent.png"
+    },
+    "vehicle": {
+      "id": 8,
+      "type": "SUV",
+      "make": "Jeep",
+      "model": "Compass",
+      "year": 2020,
+      "daily_rate": 68,
+      "photo": "https://i.ibb.co/0YxHbdY/jeep-compass.jpg"
+    }
+  },
+  {
+    "company": {
+      "name": "CityRide",
+      "logo": "https://i.ibb.co/nc2FX4P/cityride.png"
+    },
+    "vehicle": {
+      "id": 9,
+      "type": "Sedan",
+      "make": "Mazda",
+      "model": "3",
+      "year": 2022,
+      "daily_rate": 48,
+      "photo": "https://i.ibb.co/3C5xRPh/mazda-3.jpg"
+    }
+  },
+  {
+    "company": {
+      "name": "EcoDrive",
+      "logo": "https://i.ibb.co/vqJqk2P/ecodrive.png"
+    },
+    "vehicle": {
+      "id": 10,
+      "type": "Hybrid",
+      "make": "Toyota",
+      "model": "Prius",
+      "year": 2023,
+      "daily_rate": 55,
+      "photo": "https://i.ibb.co/vBVmKJP/toyota-prius.jpg"
+    }
+  },
+  {
+    "company": {
+      "name": "EliteCars",
+      "logo": "https://i.ibb.co/QC12pn8/elitecars.png"
+    },
+    "vehicle": {
+      "id": 11,
+      "type": "Luxury",
+      "make": "BMW",
+      "model": "5 Series",
+      "year": 2021,
+      "daily_rate": 120,
+      "photo": "https://i.ibb.co/XJY6JRL/bmw-5series.jpg"
+    }
+  },
+  {
+    "company": {
+      "name": "NextRide",
+      "logo": "https://i.ibb.co/J2RXFvL/nextride.png"
+    },
+    "vehicle": {
+      "id": 12,
+      "type": "SUV",
+      "make": "Tesla",
+      "model": "Model X",
+      "year": 2023,
+      "daily_rate": 150,
+      "photo": "https://i.ibb.co/bRddChG/tesla-modelx.jpg"
+    }
+  },
+  {
+    "company": {
+      "name": "BudgetWheels",
+      "logo": "https://i.ibb.co/ZTtD5Qp/budgetwheels.png"
+    },
+    "vehicle": {
+      "id": 13,
+      "type": "Hatchback",
+      "make": "Suzuki",
+      "model": "Swift",
+      "year": 2020,
+      "daily_rate": 30,
+      "photo": "https://i.ibb.co/mF3tj8k/suzuki-swift.jpg"
+    }
+  },
+  {
+    "company": {
+      "name": "AutoGo",
+      "logo": "https://i.ibb.co/sV1CbZw/autogo.png"
+    },
+    "vehicle": {
+      "id": 14,
+      "type": "Van",
+      "make": "Toyota",
+      "model": "Hiace",
+      "year": 2021,
+      "daily_rate": 80,
+      "photo": "https://i.ibb.co/qBbx1hZ/toyota-hiace.jpg"
+    }
+  },
+  {
+    "company": {
+      "name": "PrimeDrive",
+      "logo": "https://i.ibb.co/1QqYjvY/primedrive.png"
+    },
+    "vehicle": {
+      "id": 15,
+      "type": "Luxury",
+      "make": "Audi",
+      "model": "A6",
+      "year": 2022,
+      "daily_rate": 130,
+      "photo": "https://i.ibb.co/SvdW6pz/audi-a6.jpg"
+    }
+  },
+  {
+    "company": {
+      "name": "RideNow",
+      "logo": "https://i.ibb.co/7V0KqVf/ridenow.png"
+    },
+    "vehicle": {
+      "id": 16,
+      "type": "Truck",
+      "make": "Isuzu",
+      "model": "D-Max",
+      "year": 2019,
+      "daily_rate": 75,
+      "photo": "https://i.ibb.co/5rm7yCr/isuzu-dmax.jpg"
+    }
+  },
+  {
+    "company": {
+      "name": "SmartFleet",
+      "logo": "https://i.ibb.co/b5ZqfTg/smartfleet.png"
+    },
+    "vehicle": {
+      "id": 17,
+      "type": "SUV",
+      "make": "Mitsubishi",
+      "model": "Outlander",
+      "year": 2021,
+      "daily_rate": 65,
+      "photo": "https://i.ibb.co/nLJbKfk/mitsubishi-outlander.jpg"
+    }
+  },
+  {
+    "company": {
+      "name": "RidePro",
+      "logo": "https://i.ibb.co/JRSwfkt/ridepro.png"
+    },
+    "vehicle": {
+      "id": 18,
+      "type": "Sedan",
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "year": 2022,
+      "daily_rate": 52,
+      "photo": "https://i.ibb.co/Zcgb8Z1/chevrolet-malibu.jpg"
+    }
+  }
+]

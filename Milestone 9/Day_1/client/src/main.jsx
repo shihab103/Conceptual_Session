@@ -8,18 +8,23 @@ import Login from "./Page/Login/Login.jsx";
 import Register from "./Page/Register/Register.jsx";
 import About from "./Page/About/About.jsx";
 import Blog from "./Page/Blog/Blog.jsx";
+import Documentation from "./Page/Documentation/Documentation.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: RootLayout,
     children: [
-      { path: "/home", Component: Home },
+      { index: true, Component: Home, loader: () => fetch("/data.json") },
       { path: "/login", Component: Login },
       { path: "/register", Component: Register },
       { path: "/about", Component: About },
       { path: "/blog", Component: Blog },
     ],
+  },
+  {
+    path: "/documentation",
+    Component: Documentation,
   },
 ]);
 
