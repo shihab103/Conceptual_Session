@@ -39,7 +39,7 @@ export default function Navbar() {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">SRS</a>
+        <a className="btn btn-ghost text-pink-500 text-xl">SRS</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
@@ -48,12 +48,12 @@ export default function Navbar() {
         {user ? (
           <button
             onClick={handleLogOut}
-            className="btn bg-indigo-500 text-white"
+            className="btn bg-pink-500 text-white"
           >
             Log Out
           </button>
         ) : (
-          <button onClick={()=>navigate('/login')} className="btn bg-indigo-500 text-white">Login</button>
+          <button onClick={()=>navigate('/login')} className="btn bg-pink-500 text-white">Login</button>
         )}
       </div>
     </div>

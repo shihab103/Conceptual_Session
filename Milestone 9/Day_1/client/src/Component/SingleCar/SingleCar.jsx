@@ -1,13 +1,11 @@
-import React from "react";
+import { useNavigate } from "react-router";
 
-export default function SingleCar({car}) {
+export default function SingleCar({ car }) {
+  const navigate = useNavigate();
   return (
     <div className="card bg-base-100 shadow-sm">
       <figure>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes"
-        />
+        <img className="h-50 w-full object-cover" src={car.vehicle.photo} alt="Shoes" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{car.company.name}</h2>
@@ -16,7 +14,12 @@ export default function SingleCar({car}) {
           title and actions parts
         </p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
+          <button
+            onClick={() => navigate(`/cardDetails/${car.vehicle.id}`)}
+            className="btn bg-pink-500 text-white"
+          >
+            Details
+          </button>
         </div>
       </div>
     </div>

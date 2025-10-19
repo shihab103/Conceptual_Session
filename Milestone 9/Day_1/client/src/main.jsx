@@ -9,6 +9,7 @@ import Register from "./Page/Register/Register.jsx";
 import About from "./Page/About/About.jsx";
 import Blog from "./Page/Blog/Blog.jsx";
 import Documentation from "./Page/Documentation/Documentation.jsx";
+import CarDetails from "./Page/CarDetails/CarDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
       { path: "/register", Component: Register },
       { path: "/about", Component: About },
       { path: "/blog", Component: Blog },
+      {
+        path: "/cardDetails/:id",
+        Component: CarDetails,
+        loader: () => fetch("/data.json"),
+      },
     ],
   },
   {

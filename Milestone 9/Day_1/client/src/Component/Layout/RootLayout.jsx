@@ -8,6 +8,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
+import Footer from "../Footer/Footer";
 export const valueContext = createContext();
 
 export default function RootLayout() {
@@ -58,6 +59,7 @@ useEffect(() => {
       <valueContext.Provider value={contextValues}>
         <Navbar />
         <Outlet />
+        <Footer/>
       </valueContext.Provider>
     </div>
   );
