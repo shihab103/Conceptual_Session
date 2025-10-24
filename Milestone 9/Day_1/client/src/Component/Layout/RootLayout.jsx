@@ -1,4 +1,4 @@
-import { Outlet } from "react-router";
+import { Outlet, useNavigate } from "react-router";
 import Navbar from "../Navbar/Navbar";
 import { createContext, useEffect, useState } from "react";
 import { auth } from "../../firebase/firebase.config";
@@ -13,7 +13,8 @@ export const valueContext = createContext();
 
 export default function RootLayout() {
   const [user, setUser] = useState(null);
-  console.log(user);
+
+  const navigate = useNavigate();
 
   const handleLogin = (email, password) => {
     signInWithEmailAndPassword(auth, email, password)
@@ -22,6 +23,7 @@ export default function RootLayout() {
         console.log(currentUser);
         console.log("Login successful!");
         setUser(currentUser);
+        navigate('/');
       })
       .catch((error) => {
         console.log(error);

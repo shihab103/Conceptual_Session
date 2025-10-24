@@ -39,7 +39,9 @@ export default function Navbar() {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-pink-500 text-xl">SRS</a>
+        <div onClick={()=>navigate('/')}>
+          <a className="font-bold cursor-pointer text-pink-500 text-xl">SRS</a>
+        </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>

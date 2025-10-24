@@ -1,9 +1,12 @@
-import React from "react";
-import { useLoaderData, useParams } from "react-router";
+import React, { useContext, useEffect } from "react";
+import { useLoaderData, useNavigate, useParams } from "react-router";
+import { valueContext } from "../../Component/Layout/RootLayout";
 
 export default function CarDetails() {
   const { id } = useParams();
   const data = useLoaderData();
+  const { user } = useContext(valueContext);
+  const navigate = useNavigate();
 
   const singleCar = data.find((item) => item.vehicle.id === parseInt(id));
 
@@ -16,6 +19,12 @@ export default function CarDetails() {
   }
 
   const { company, vehicle } = singleCar;
+
+  useEffect(() => {
+    if (!user || !user?.email) {
+      navigate("/login");
+    }
+  }, [user, navigate]);
 
   return (
     <div className="max-w-4xl mx-auto my-10 p-6 bg-white rounded-lg shadow-lg">
@@ -32,10 +41,14 @@ export default function CarDetails() {
         {/* Car Info */}
         <div className="md:w-1/2 flex flex-col justify-between">
           <div>
-            <h1 className="text-3xl font-bold mb-2">{vehicle.make} {vehicle.model}</h1>
+            <h1 className="text-3xl font-bold mb-2">
+              {vehicle.make} {vehicle.model}
+            </h1>
             <p className="text-gray-600 mb-4">Type: {vehicle.type}</p>
             <p className="text-gray-600 mb-4">Year: {vehicle.year}</p>
-            <p className="text-gray-600 mb-4">Daily Rate: ${vehicle.daily_rate}</p>
+            <p className="text-gray-600 mb-4">
+              Daily Rate: ${vehicle.daily_rate}
+            </p>
             <p className="text-gray-600 mb-4">Company: {company.name}</p>
           </div>
 
