@@ -1,18 +1,25 @@
-import React from 'react';
+import React from "react";
 
 export default function AddGymSchedule() {
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // create FormData object
     const formData = new FormData(e.target);
-
-    // convert FormData to normal object
     const data = Object.fromEntries(formData.entries());
+    console.log("Gym Schedule Added:", data);
 
-    console.log('✅ Gym Schedule Added:', data);
-    alert('Gym Schedule Added Successfully!');
+    fetch("http://localhost:3000/schedule", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => {
+        res.json();
+      })
+      .then((data) => console.log(data));
 
     // reset the form
     e.target.reset();
