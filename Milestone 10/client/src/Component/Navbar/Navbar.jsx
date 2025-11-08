@@ -21,6 +21,7 @@ export default function Navbar() {
     <div className="flex gap-3">
       <NavLink to="/">Home</NavLink>
       <NavLink to="/addGymtime">Gym Schedule</NavLink>
+      <NavLink to="/schedule">Schedule</NavLink>
     </div>
   );
 

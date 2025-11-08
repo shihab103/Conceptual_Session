@@ -4,6 +4,7 @@ import Login from "../Component/Login/Login";
 import Register from "../Component/Register/Register";
 import Home from "../Pages/Home/Home";
 import AddGymSchedule from "../Pages/AddGysSchedule/AddGymSchedule";
+import Schedule from "../Pages/Schedule/Schedule";
 
 export const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ export const router = createBrowserRouter([
       { path: "/login", Component: Login },
       { path: "/register", Component: Register },
       { path: "/addGymtime", Component: AddGymSchedule },
+      { path: "/schedule", Component: Schedule },
     ],
   },
 ]);

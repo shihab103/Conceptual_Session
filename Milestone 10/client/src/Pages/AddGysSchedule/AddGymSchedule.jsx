@@ -1,27 +1,44 @@
 import React from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Axios from "../../Hooks/Axios";
 
 export default function AddGymSchedule() {
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // create FormData object
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
     console.log("Gym Schedule Added:", data);
 
-    fetch("http://localhost:3000/schedule", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((res) => {
-        res.json();
-      })
-      .then((data) => console.log(data));
+    // fetch("http://localhost:3000/schedule", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(data),
+    // })
+    //   .then((res) => {
+    //     if (!res.ok) {
+    //       throw new Error("Failed to add schedule");
+    //     }
+    //     return res.json();
+    //   })
+    //   .then((data) => {
+    //     console.log("Server response:", data);
+    //     toast.success("✅ Schedule added successfully!");
+    //   })
+    //   .catch((err) => {
+    //     console.error(err);
+    //     toast.error("❌ Failed to add schedule!");
+    //   });
 
-    // reset the form
+    // with axios
+
+    const response = await Axios.post("/schedule", data);
+    console.log(response.data);
+    toast.success("✅ Schedule added successfully!");
+
     e.target.reset();
   };
 
@@ -96,6 +113,9 @@ export default function AddGymSchedule() {
           </button>
         </form>
       </div>
+
+      {/* Toast container */}
+      <ToastContainer position="top-center" autoClose={3000} />
     </div>
   );
 }
